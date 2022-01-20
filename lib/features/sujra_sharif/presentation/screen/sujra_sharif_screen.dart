@@ -54,7 +54,10 @@ class _SujraSharifScreenState extends State<SujraSharifScreen> {
                           style: Theme.of(context).textTheme.headline6,
                         ),
                         Text(
-                          'English Sujra sharif of Hazrat sdklfkjasdhfdkldsjf;lkasjffkjasdjfkj Tajusrilksdjfjsdkfjjhdfkjhhdfjkhaskfhajskdhfljkhalksdjfhkjhya',
+                          ''''English Sujra sharif o
+                          f Hazrat sdklfkjasdhfdkldsjf;lkasjffkjasdjfkj
+                          Tajusrilksdjfjsdkfjjhdfkjhhdfjkhaskfhajskdhfljkhalksdjfhk
+                          jhya''',
                           maxLines: 3,
                           overflow: TextOverflow.ellipsis,
                           style: Theme.of(context).textTheme.caption,

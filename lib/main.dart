@@ -2,11 +2,9 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:sdfsdf/asdkfha.dart';
 import 'package:sdfsdf/core/util/navigation_bar.dart';
 import 'core/theme/theme_bloc/theme_bloc.dart';
 import 'dependency_injection.dart' as sl;
@@ -22,8 +20,10 @@ void main() async {
     storageDirectory: await getApplicationDocumentsDirectory(),
   );
 
-  HydratedBlocOverrides.runZoned(() => runApp(const MyApp()),
-      storage: storage, blocObserver: AppCubitObserver());
+  HydratedBlocOverrides.runZoned(
+    () => runApp(const MyApp()),
+    storage: storage,
+  );
 }
 
 class MyApp extends StatefulWidget {

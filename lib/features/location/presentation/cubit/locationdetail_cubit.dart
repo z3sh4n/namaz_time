@@ -12,12 +12,11 @@ class LocationdetailCubit extends Cubit<LocationdetailState> {
 
     Placemark place = placemarks[1];
 
-    print('adfkladsklf');
-
     emit(
       LocationdetailLoaded(
         '${place.street},${place.locality},${place.administrativeArea},${place.country}',
       ),
     );
+    print('adfkladsklf');
   }
 }

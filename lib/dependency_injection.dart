@@ -28,7 +28,7 @@ Future<void> init() async {
 
   sl.registerFactory<SujraSharifCubit>(() => SujraSharifCubit(sl()));
 
-  sl.registerFactory<LocationdetailCubit>(() => LocationdetailCubit());
+  sl.registerSingleton<LocationdetailCubit>(LocationdetailCubit());
 
   sl.registerFactory<QiblaBloc>(() => QiblaBloc());
 
@@ -55,9 +55,10 @@ Future<void> init() async {
 
   // external
 
-  sl.registerFactory<SujraDataSource>(() => SujraDataSourceImpl());
+  sl.registerLazySingleton<SujraDataSource>(() => SujraDataSourceImpl());
 
-  sl.registerFactory<NamazRemoteDataSource>(() => NamazRemoteDataSourceImpl());
+  sl.registerLazySingleton<NamazRemoteDataSource>(
+      () => NamazRemoteDataSourceImpl());
 
-  sl.registerFactory<LocationDataSource>(() => LocationDataSourceImpl());
+  sl.registerLazySingleton<LocationDataSource>(() => LocationDataSourceImpl());
 }

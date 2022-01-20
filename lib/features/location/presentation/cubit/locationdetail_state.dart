@@ -13,7 +13,4 @@ class LocationdetailLoaded extends LocationdetailState {
   final String address;
 
   const LocationdetailLoaded(this.address);
-
-  @override
-  String toString() => 'LocationdetailLoaded(address: $address)';
 }

@@ -27,9 +27,6 @@ class NamazTimeError extends NamazTimeState {
   const NamazTimeError(this.error);
 
   @override
-
-  @override
-  String toString() => 'NamazTimeError(error: $error)';
   List<Object> get props => [error];
 }
 

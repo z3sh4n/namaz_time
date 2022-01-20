@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 const Color kLightPrimary = Color(0xFF79DAFA);
-const Color kLightAccent = Color(0xFF48AB8C);
+const Color kLightAccent = Color(0xFF79fa9e);
 const Color kLightTextColor = Colors.black;
 const Color kLightPlaceholder = Color(0xFFE8EAF0);
 const Color kLightPlaceholderText = Color(0xFFC6CAD3);

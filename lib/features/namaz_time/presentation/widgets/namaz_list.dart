@@ -7,6 +7,7 @@ import '../../../../dependency_injection.dart';
 
 class PrayerTimeList extends StatefulWidget {
   final LocationState locationState;
+
   const PrayerTimeList({
     Key? key,
     required this.locationState,

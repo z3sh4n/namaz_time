@@ -10,9 +10,6 @@ abstract class LocationState extends Equatable {
     this.longitude, {
     this.failure,
   });
-
-  @override
-  String toString() => 'LocationState(latitude: $latitude, longitude: $longitude, failure: $failure)';
 }
 
 class LocationInitial extends LocationState {
