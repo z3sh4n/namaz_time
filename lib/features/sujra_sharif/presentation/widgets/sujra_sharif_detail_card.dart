@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:sdfsdf/core/theme/size_constants.dart';
-import 'package:sdfsdf/core/theme/theme_color.dart';
-import 'package:sdfsdf/features/sujra_sharif/domain/entity/sujra_detail_entity.dart';
-import 'package:sdfsdf/features/sujra_sharif/domain/entity/sujra_entity.dart';
+import '../../../../core/theme/size_constants.dart';
+import '../../../../core/theme/theme_color.dart';
+import '../../domain/entity/sujra_detail_entity.dart';
+import '../../domain/entity/sujra_entity.dart';
 
 class SujraSharifDetailCard extends StatelessWidget {
   const SujraSharifDetailCard({

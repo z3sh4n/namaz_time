@@ -1,8 +1,8 @@
 import 'package:dartz/dartz.dart';
-import 'package:sdfsdf/core/errors/app_error.dart';
-import 'package:sdfsdf/features/sujra_sharif/data/datasource/sujra_datasource.dart';
-import 'package:sdfsdf/features/sujra_sharif/domain/entity/sujra_entity.dart';
-import 'package:sdfsdf/features/sujra_sharif/domain/repository/sujra_repository.dart';
+import '../../../../core/errors/app_error.dart';
+import '../datasource/sujra_datasource.dart';
+import '../../domain/entity/sujra_entity.dart';
+import '../../domain/repository/sujra_repository.dart';
 
 class SujraRepositoryImpl extends SujraRepository {
   final SujraDataSource sujraDataSource;

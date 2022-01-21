@@ -1,5 +1,5 @@
-import 'package:sdfsdf/features/sujra_sharif/data/model/sujra_detail_model.dart';
-import 'package:sdfsdf/features/sujra_sharif/data/model/sujra_model.dart';
+import '../model/sujra_detail_model.dart';
+import '../model/sujra_model.dart';
 
 abstract class SujraDataSource {
   Future<List<SujraModel>> getSujraSharif();

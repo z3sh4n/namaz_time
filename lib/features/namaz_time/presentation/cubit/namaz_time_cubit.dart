@@ -1,10 +1,10 @@
 import 'package:bloc/bloc.dart';
 import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
-import 'package:sdfsdf/core/errors/app_error.dart';
-import 'package:sdfsdf/core/usecase/namaz_time_params.dart';
-import 'package:sdfsdf/features/namaz_time/domain/entities/namaz_time_entity.dart';
-import 'package:sdfsdf/features/namaz_time/domain/usecases/get_namaz_time_list_usecase.dart';
+import '../../../../core/errors/app_error.dart';
+import '../../../../core/usecase/namaz_time_params.dart';
+import '../../domain/entities/namaz_time_entity.dart';
+import '../../domain/usecases/get_namaz_time_list_usecase.dart';
 
 part 'namaz_time_state.dart';
 

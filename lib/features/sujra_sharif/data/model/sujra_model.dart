@@ -1,5 +1,5 @@
-import 'package:sdfsdf/features/sujra_sharif/data/model/sujra_detail_model.dart';
-import 'package:sdfsdf/features/sujra_sharif/domain/entity/sujra_entity.dart';
+import 'sujra_detail_model.dart';
+import '../../domain/entity/sujra_entity.dart';
 
 class SujraModel extends SujraEntity {
   final String title1;

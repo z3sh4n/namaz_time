@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:sdfsdf/features/location/presentation/cubit/location_cubit.dart';
+import '../../../location/presentation/cubit/location_cubit.dart';
 
 import '../../controller/qibla_controller.dart';
 

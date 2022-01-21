@@ -1,11 +1,11 @@
 import 'package:bloc/bloc.dart';
 import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
-import 'package:sdfsdf/core/errors/app_error.dart';
-import 'package:sdfsdf/core/usecase/no_params.dart';
-import 'package:sdfsdf/features/location/domain/entities/location_entity.dart';
-import 'package:sdfsdf/features/location/domain/usecase/get_location_usecase.dart';
-import 'package:sdfsdf/features/location/presentation/cubit/locationdetail_cubit.dart';
+import '../../../../core/errors/app_error.dart';
+import '../../../../core/usecase/no_params.dart';
+import '../../domain/entities/location_entity.dart';
+import '../../domain/usecase/get_location_usecase.dart';
+import 'locationdetail_cubit.dart';
 
 part 'location_state.dart';
 

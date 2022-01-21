@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
-import 'package:sdfsdf/core/theme/size_constants.dart';
-import 'package:sdfsdf/features/sujra_sharif/presentation/cubit/sujrasharif_cubit.dart';
-import 'package:sdfsdf/features/sujra_sharif/presentation/widgets/sujra_sharif_card.dart';
-import 'package:sdfsdf/features/sujra_sharif/presentation/screen/sujra_sharif_detail_screen.dart';
-import 'package:sdfsdf/features/sujra_sharif/presentation/screen/sujra_sharif_list_screen.dart';
+import '../../../../core/theme/size_constants.dart';
+import '../cubit/sujrasharif_cubit.dart';
+import '../widgets/sujra_sharif_card.dart';
+import 'sujra_sharif_detail_screen.dart';
+import 'sujra_sharif_list_screen.dart';
 
 import '../../../../dependency_injection.dart';
 

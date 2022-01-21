@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:sdfsdf/features/sujra_sharif/domain/entity/sujra_detail_entity.dart';
+import '../../domain/entity/sujra_detail_entity.dart';
 
 class SujraDetailModel extends SujraDetailEntity {
   final String title;

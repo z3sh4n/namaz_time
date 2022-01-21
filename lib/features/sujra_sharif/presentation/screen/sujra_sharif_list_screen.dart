@@ -1,11 +1,11 @@
 import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
-import 'package:sdfsdf/core/theme/size_constants.dart';
-import 'package:sdfsdf/features/sujra_sharif/domain/entity/sujra_entity.dart';
-import 'package:sdfsdf/features/sujra_sharif/presentation/widgets/sujra_sharif_card.dart';
-import 'package:sdfsdf/features/sujra_sharif/presentation/screen/sujra_sharif_detail_screen.dart';
-import 'package:sdfsdf/features/sujra_sharif/presentation/widgets/sujra_sharif_detail_card.dart';
+import '../../../../core/theme/size_constants.dart';
+import '../../domain/entity/sujra_entity.dart';
+import '../widgets/sujra_sharif_card.dart';
+import 'sujra_sharif_detail_screen.dart';
+import '../widgets/sujra_sharif_detail_card.dart';
 
 class SujraListScreen extends StatelessWidget {
   final SujraEntity sujraEntity;

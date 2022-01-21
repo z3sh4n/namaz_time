@@ -1,6 +1,6 @@
 import 'package:adhan/adhan.dart' as adhan;
 import 'package:intl/intl.dart';
-import 'package:sdfsdf/features/namaz_time/data/models/namaz_time_model.dart';
+import '../models/namaz_time_model.dart';
 
 abstract class NamazRemoteDataSource {
   Future<List<NamazTimeModel>> getNamazTime(double lat, double lang);

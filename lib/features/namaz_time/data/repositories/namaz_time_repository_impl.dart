@@ -1,8 +1,8 @@
 import 'package:dartz/dartz.dart';
-import 'package:sdfsdf/core/errors/app_error.dart';
-import 'package:sdfsdf/features/namaz_time/data/datasources/namaz_remote_datasource.dart';
-import 'package:sdfsdf/features/namaz_time/domain/entities/namaz_time_entity.dart';
-import 'package:sdfsdf/features/namaz_time/domain/repositories/namaz_time_repository.dart';
+import '../../../../core/errors/app_error.dart';
+import '../datasources/namaz_remote_datasource.dart';
+import '../../domain/entities/namaz_time_entity.dart';
+import '../../domain/repositories/namaz_time_repository.dart';
 
 class NamazTimeRepositoryImpl extends NamazTimeRepository {
   final NamazRemoteDataSource remoteDataSource;

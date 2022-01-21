@@ -1,8 +1,8 @@
 import 'package:dartz/dartz.dart';
-import 'package:sdfsdf/core/errors/app_error.dart';
-import 'package:sdfsdf/features/location/data/datasource/location_datasource.dart';
-import 'package:sdfsdf/features/location/domain/entities/location_entity.dart';
-import 'package:sdfsdf/features/location/domain/repositories/location_repository.dart';
+import '../../../../core/errors/app_error.dart';
+import '../datasource/location_datasource.dart';
+import '../../domain/entities/location_entity.dart';
+import '../../domain/repositories/location_repository.dart';
 
 class LocationRepositoryImpl extends LocationRepository {
   final LocationDataSource locationDataSource;

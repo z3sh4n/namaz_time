@@ -1,9 +1,9 @@
 import 'dart:core';
 
 import 'package:flutter/material.dart';
-import 'package:sdfsdf/features/namaz_time/domain/entities/namaz_time_entity.dart';
-import 'package:sdfsdf/features/notification_remain_time/services/notification_service.dart';
-import 'package:sdfsdf/features/notification_remain_time/services/receive_notification.dart';
+import '../../namaz_time/domain/entities/namaz_time_entity.dart';
+import '../services/notification_service.dart';
+import '../services/receive_notification.dart';
 
 class TimingController {
   final List<NamazTimeEntity> namazTime;

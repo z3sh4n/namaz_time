@@ -3,9 +3,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hijri/hijri_calendar.dart';
 import 'package:intl/intl.dart';
-import 'package:sdfsdf/core/theme/size_constants.dart';
-import 'package:sdfsdf/dependency_injection.dart';
-import 'package:sdfsdf/features/location/presentation/cubit/locationdetail_cubit.dart';
+import '../../../../core/theme/size_constants.dart';
+import '../../../../dependency_injection.dart';
+import '../../../location/presentation/cubit/locationdetail_cubit.dart';
 
 class TopCard extends StatefulWidget {
   const TopCard({Key? key}) : super(key: key);

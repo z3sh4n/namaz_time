@@ -1,9 +1,9 @@
 import 'package:dartz/dartz.dart';
-import 'package:sdfsdf/core/errors/app_error.dart';
-import 'package:sdfsdf/core/usecase/no_params.dart';
-import 'package:sdfsdf/core/usecase/usecase.dart';
-import 'package:sdfsdf/features/sujra_sharif/domain/entity/sujra_entity.dart';
-import 'package:sdfsdf/features/sujra_sharif/domain/repository/sujra_repository.dart';
+import '../../../../core/errors/app_error.dart';
+import '../../../../core/usecase/no_params.dart';
+import '../../../../core/usecase/usecase.dart';
+import '../entity/sujra_entity.dart';
+import '../repository/sujra_repository.dart';
 
 class GetSujraSharifList extends Usecase<List<SujraEntity>, NoParams> {
   final SujraRepository sujraRepository;

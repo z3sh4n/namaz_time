@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:sdfsdf/core/theme/size_constants.dart';
-import 'package:sdfsdf/core/theme/theme_color.dart';
-import 'package:sdfsdf/features/namaz_time/presentation/screens/home_screen.dart';
-import 'package:sdfsdf/features/qiblah_direction/screen/qibla_screen.dart';
-import 'package:sdfsdf/features/quran_sharif/presentation/screen/quran_sharif_screen.dart';
-import 'package:sdfsdf/features/sujra_sharif/presentation/screen/sujra_sharif_screen.dart';
+import '../theme/size_constants.dart';
+import '../theme/theme_color.dart';
+import '../../features/namaz_time/presentation/screens/home_screen.dart';
+import '../../features/qiblah_direction/screen/qibla_screen.dart';
+import '../../features/quran_sharif/presentation/screen/quran_sharif_screen.dart';
+import '../../features/sujra_sharif/presentation/screen/sujra_sharif_screen.dart';
 
 class BottomNav3 extends StatefulWidget {
   const BottomNav3({Key? key}) : super(key: key);

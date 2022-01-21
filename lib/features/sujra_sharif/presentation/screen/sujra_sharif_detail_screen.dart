@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sdfsdf/features/sujra_sharif/domain/entity/sujra_detail_entity.dart';
-import 'package:sdfsdf/features/sujra_sharif/domain/entity/sujra_entity.dart';
+import '../../domain/entity/sujra_detail_entity.dart';
+import '../../domain/entity/sujra_entity.dart';
 
 class SujraDetailScreen extends StatelessWidget {
   final SujraDetailEntity sujraSharif;

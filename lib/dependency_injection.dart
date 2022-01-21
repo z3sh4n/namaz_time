@@ -1,15 +1,15 @@
 import 'package:get_it/get_it.dart';
 
-import 'package:sdfsdf/features/location/presentation/cubit/locationdetail_cubit.dart';
-import 'package:sdfsdf/features/namaz_time/data/datasources/namaz_remote_datasource.dart';
-import 'package:sdfsdf/features/namaz_time/presentation/cubit/namaz_time_cubit.dart';
-import 'package:sdfsdf/features/qiblah_direction/blocs/angle_bloc/angle_bloc.dart';
-import 'package:sdfsdf/features/qiblah_direction/blocs/qibla_bloc/qibla_bloc.dart';
-import 'package:sdfsdf/features/sujra_sharif/data/datasource/sujra_datasource.dart';
-import 'package:sdfsdf/features/sujra_sharif/data/repository_impl/sujra_repository_impl.dart';
-import 'package:sdfsdf/features/sujra_sharif/domain/repository/sujra_repository.dart';
-import 'package:sdfsdf/features/sujra_sharif/domain/usecase/get_sujra_sharif_usecase.dart';
-import 'package:sdfsdf/features/sujra_sharif/presentation/cubit/sujrasharif_cubit.dart';
+import 'features/location/presentation/cubit/locationdetail_cubit.dart';
+import 'features/namaz_time/data/datasources/namaz_remote_datasource.dart';
+import 'features/namaz_time/presentation/cubit/namaz_time_cubit.dart';
+import 'features/qiblah_direction/blocs/angle_bloc/angle_bloc.dart';
+import 'features/qiblah_direction/blocs/qibla_bloc/qibla_bloc.dart';
+import 'features/sujra_sharif/data/datasource/sujra_datasource.dart';
+import 'features/sujra_sharif/data/repository_impl/sujra_repository_impl.dart';
+import 'features/sujra_sharif/domain/repository/sujra_repository.dart';
+import 'features/sujra_sharif/domain/usecase/get_sujra_sharif_usecase.dart';
+import 'features/sujra_sharif/presentation/cubit/sujrasharif_cubit.dart';
 
 import 'features/location/data/datasource/location_datasource.dart';
 import 'features/location/data/repository/location_repository_impl.dart';

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:sdfsdf/core/util/loading.dart';
-import 'package:sdfsdf/features/location/presentation/cubit/location_cubit.dart';
+import '../../../core/util/loading.dart';
+import '../../location/presentation/cubit/location_cubit.dart';
 
 import '../blocs/angle_bloc/angle_bloc.dart';
 import '../blocs/qibla_bloc/qibla_bloc.dart';

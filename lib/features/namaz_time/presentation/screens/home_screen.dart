@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:sdfsdf/core/theme/theme_bloc/theme_bloc.dart';
-import 'package:sdfsdf/features/location/presentation/cubit/location_cubit.dart';
-import 'package:sdfsdf/features/namaz_time/presentation/widgets/change_theme_switch.dart';
-import 'package:sdfsdf/features/namaz_time/presentation/widgets/top_card.dart';
-import 'package:sdfsdf/features/notification_remain_time/controller/notification_controller.dart';
+import '../../../../core/theme/theme_bloc/theme_bloc.dart';
+import '../../../location/presentation/cubit/location_cubit.dart';
+import '../widgets/change_theme_switch.dart';
+import '../widgets/top_card.dart';
+import '../../../notification_remain_time/controller/notification_controller.dart';
 
 import '../../../../dependency_injection.dart';
 import '../widgets/namaz_list.dart';

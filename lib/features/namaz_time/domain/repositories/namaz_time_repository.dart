@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
-import 'package:sdfsdf/core/errors/app_error.dart';
-import 'package:sdfsdf/features/namaz_time/domain/entities/namaz_time_entity.dart';
+import '../../../../core/errors/app_error.dart';
+import '../entities/namaz_time_entity.dart';
 
 
 abstract class NamazTimeRepository {
