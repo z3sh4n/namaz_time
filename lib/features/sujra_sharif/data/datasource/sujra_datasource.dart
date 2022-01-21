@@ -1,3 +1,4 @@
+import 'package:sdfsdf/features/sujra_sharif/data/model/sujra_detail_model.dart';
 import 'package:sdfsdf/features/sujra_sharif/data/model/sujra_model.dart';
 
 abstract class SujraDataSource {
@@ -9,9 +10,15 @@ class SujraDataSourceImpl extends SujraDataSource {
   Future<List<SujraModel>> getSujraSharif() async {
     return [
       const SujraModel(
-        title: 'tikldjakljasdfjkjahdfhskdjftle',
-        sujraSharif: 'data',
-      ),
+        image1: 'image1',
+        title1: 'title1',
+        sujraSharif: [
+          SujraDetailModel(title: 'title', data: 'fsdlkfja'),
+          SujraDetailModel(title: 'title', data: 'fsdlkfja'),
+          SujraDetailModel(title: 'title', data: 'fsdlkfja'),
+          SujraDetailModel(title: 'title', data: 'fsdlkfja'),
+        ],
+      )
     ];
   }
 }

@@ -145,6 +145,10 @@ final Map<AppTheme, ThemeData> kAppThemeData = {
           fontSize: 14.sp,
           color: kLightTextColor,
         ),
+        caption: TextStyle(
+          fontSize: 10.sp,
+          color: kLightTextColor.withOpacity(0.7),
+        ),
       ),
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(

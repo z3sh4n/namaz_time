@@ -52,9 +52,10 @@ dependencies:
   hijri: ^3.0.0
   flutter_svg: ^1.0.1
   motion_sensors: ^0.1.0
-  auto_size_text: ^3.0.0
+  # auto_size_text: ^3.0.0
   flutter_staggered_animations: ^1.0.0
   path_provider: ^2.0.8
+  animations: ^2.0.2
   
 
 dev_dependencies:
