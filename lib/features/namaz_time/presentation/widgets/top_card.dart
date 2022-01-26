@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hijri/hijri_calendar.dart';
 import 'package:intl/intl.dart';
+import 'package:sdfsdf/core/theme/theme_color.dart';
 import '../../../../core/theme/size_constants.dart';
 import '../../../../dependency_injection.dart';
 import '../../../location/presentation/cubit/locationdetail_cubit.dart';
@@ -43,9 +44,12 @@ class _TopCardState extends State<TopCard> {
             ],
             borderRadius: BorderRadius.circular(20),
             gradient: const LinearGradient(
-              colors: [Color(0xff97E7FF), Color(0xff25A5E5)],
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
+              colors: [
+                kLightAccent,
+                kLightPrimary,
+              ],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
             )),
         margin: EdgeInsets.all(15.r),
         child: Row(
@@ -76,7 +80,10 @@ class _TopCardState extends State<TopCard> {
                         _today.toFormat("MMMM dd, yyyy"),
                         maxLines: 2,
                         softWrap: true,
-                        style: Theme.of(context).textTheme.bodyText1,
+                        style: Theme.of(context)
+                            .textTheme
+                            .bodyText1!
+                            .copyWith(color: kLightTextColor),
                       )
                     ],
                   ),
@@ -91,7 +98,10 @@ class _TopCardState extends State<TopCard> {
                           DateFormat.yMMMMd().format(DateTime.now()),
                           maxLines: 1,
                           softWrap: true,
-                          style: Theme.of(context).textTheme.bodyText1,
+                          style: Theme.of(context)
+                              .textTheme
+                              .bodyText1!
+                              .copyWith(color: kLightTextColor),
                         ),
                       ),
                     ],
@@ -104,7 +114,6 @@ class _TopCardState extends State<TopCard> {
                       // ),
                       BlocBuilder<LocationdetailCubit, LocationdetailState>(
                         builder: (context, state) {
-                          print(state);
                           if (state is LocationdetailLoaded) {
                             return Expanded(
                               child: Text(
@@ -112,7 +121,10 @@ class _TopCardState extends State<TopCard> {
                                 maxLines: 2,
                                 overflow: TextOverflow.ellipsis,
                                 softWrap: true,
-                                style: Theme.of(context).textTheme.bodyText1,
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .bodyText1!
+                                    .copyWith(color: kLightTextColor),
                               ),
                             );
                           }

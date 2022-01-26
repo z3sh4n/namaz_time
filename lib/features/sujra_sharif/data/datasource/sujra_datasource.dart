@@ -10,13 +10,25 @@ class SujraDataSourceImpl extends SujraDataSource {
   Future<List<SujraModel>> getSujraSharif() async {
     return [
       const SujraModel(
-        image1: 'image1',
-        title1: 'title1',
-        sujraSharif: [
-          SujraDetailModel(title: 'title', data: 'fsdlkfja'),
-          SujraDetailModel(title: 'title', data: 'fsdlkfja'),
-          SujraDetailModel(title: 'title', data: 'fsdlkfja'),
-          SujraDetailModel(title: 'title', data: 'fsdlkfja'),
+        mTitleSubfold: 'Akhtar Raza Khan',
+        mImagaSubfold: 'assets/sujra_sharif_logos/Akhtar_raza_khan.png',
+        sujraSharifDetailList: [
+          SujraDetailModel(
+            mDetailTitle: 'Shajrah Sharif In English',
+            data: 'SHAJRA_SHAREEF_ENGLISH_ARK',
+          ),
+          SujraDetailModel(
+            mDetailTitle: 'Shajrah Sharif In Gujrati',
+            data: 'SHAJRA_SHAREEF_GUJARATI_ARK',
+          ),
+          SujraDetailModel(
+            mDetailTitle: 'Shajrah Sharif In Hindi',
+            data: 'SHAJRA_SHAREEF_HINDI_ARK',
+          ),
+          SujraDetailModel(
+            mDetailTitle: 'Shajrah Sharif In Urdu',
+            data: 'SHAJRA_SHAREEF_URDU_ARK',
+          ),
         ],
       )
     ];

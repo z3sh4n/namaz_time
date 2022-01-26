@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:sdfsdf/core/drawer/drawer.dart';
+import 'package:sdfsdf/core/theme/theme_color.dart';
+import 'package:sdfsdf/core/theme/themes.dart';
 import '../../../../core/theme/theme_bloc/theme_bloc.dart';
 import '../../../location/presentation/cubit/location_cubit.dart';
 import '../widgets/change_theme_switch.dart';
 import '../widgets/top_card.dart';
 import '../../../notification_remain_time/controller/notification_controller.dart';
 
-import '../../../../dependency_injection.dart';
 import '../widgets/namaz_list.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -25,27 +28,46 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   @override
-  void dispose() {
-    super.dispose();
-  }
-
-  @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
+          leading: GestureDetector(
+              onTap: () {
+                Scaffold.of(context).openDrawer();
+              },
+              child: Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: SvgPicture.asset(
+                  'assets/images/svg/drawer.svg',
+                  fit: BoxFit.fill,
+                  color: Theme.of(context).textTheme.headline4!.color,
+                ),
+              )),
           actions: [
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: BlocBuilder<ThemeBloc, ThemeState>(
                 builder: (context, state) {
-                  return ChangeThemeSwitch(
-                      value: state.currentTheme.brightness == Brightness.dark,
-                      onChanged: (_) {
+                  return AnimatedContainer(
+                    duration: kAnimationDuration,
+                    curve: kAnimationCurve,
+                    child: IconButton(
+                      onPressed: () {
                         BlocProvider.of<ThemeBloc>(context).add(
                           ToggleTheme(),
                         );
-                      });
+                      },
+                      icon: state.currentTheme == kAppThemeData[AppTheme.dark]!
+                          ? SvgPicture.asset(
+                              'assets/images/svg/sun1.svg',
+                              color: kDarkTextColor,
+                            )
+                          : SvgPicture.asset(
+                              'assets/images/svg/moon1.svg',
+                            ),
+                    ),
+                  );
                 },
               ),
             ),

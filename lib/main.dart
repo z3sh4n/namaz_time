@@ -1,11 +1,12 @@
 import 'dart:async';
 
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'package:path_provider/path_provider.dart';
-import 'core/util/navigation_bar.dart';
+import 'package:sdfsdf/core/util/routes.dart';
 import 'core/theme/theme_bloc/theme_bloc.dart';
 import 'dependency_injection.dart' as sl;
 import 'features/location/presentation/cubit/location_cubit.dart';
@@ -14,8 +15,13 @@ import 'features/qiblah_direction/blocs/qibla_bloc/qibla_bloc.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
   await NotificationService().init();
+
   unawaited(sl.init());
+
+  await Firebase.initializeApp();
+
   final storage = await HydratedStorage.build(
     storageDirectory: await getApplicationDocumentsDirectory(),
   );
@@ -24,6 +30,19 @@ void main() async {
     () => runApp(const MyApp()),
     storage: storage,
   );
+
+  // Directory appDocDir = await getApplicationDocumentsDirectory();
+  // File downloadToFile = File('${appDocDir.path}/SHAJRA SHAREEF HINDI.pdf');
+  // print(downloadToFile);
+  // try {
+  //   await FirebaseStorage.instance
+  //       .ref('sujra_sharif/akhtar_raza_khan/SHAJRA SHAREEF HINDI.pdf')
+  //       .writeToFile(downloadToFile)
+  //       .whenComplete(() => print('sfkladskfjkajsdflkajdsfjsadjf'));
+  // } on FirebaseException catch (e) {
+  //    e.g, e.code == 'canceled'
+  //   print(e);
+  // }
 }
 
 class MyApp extends StatefulWidget {
@@ -34,32 +53,22 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  late LocationCubit locationBloc;
-  late QiblaBloc qiblaBloc;
+  // late LocationCubit locationCubit;
 
-  @override
-  void initState() {
-    super.initState();
-    locationBloc = sl.sl<LocationCubit>();
-    qiblaBloc = sl.sl<QiblaBloc>();
-  }
-
-  @override
-  void dispose() {
-    super.dispose();
-    locationBloc.close();
-    qiblaBloc.close();
-  }
+  // @override
+  // void initState() {
+  //   super.initState();
+  // }
 
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
         BlocProvider(
-          create: (context) => locationBloc,
+          create: (context) => sl.sl<LocationCubit>(),
         ),
         BlocProvider(
-          create: (context) => qiblaBloc,
+          create: (context) => sl.sl<QiblaBloc>(),
         ),
         BlocProvider(
           create: (context) => ThemeBloc(),
@@ -71,9 +80,11 @@ class _MyAppState extends State<MyApp> {
           builder: () =>
               BlocBuilder<ThemeBloc, ThemeState>(builder: (context, state) {
                 return MaterialApp(
-                  title: 'Flutter Demo',
+                  title: 'Jamat Raza-e-Mustafa',
                   theme: state.currentTheme,
-                  home: const BottomNav3(),
+                  debugShowCheckedModeBanner: false,
+                  initialRoute: RouteGenerator.bottomTab,
+                  onGenerateRoute: RouteGenerator.generateRoute,
                 );
               })),
     );

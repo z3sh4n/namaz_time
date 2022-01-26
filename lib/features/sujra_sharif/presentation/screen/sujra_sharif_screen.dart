@@ -6,7 +6,6 @@ import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import '../../../../core/theme/size_constants.dart';
 import '../cubit/sujrasharif_cubit.dart';
 import '../widgets/sujra_sharif_card.dart';
-import 'sujra_sharif_detail_screen.dart';
 import 'sujra_sharif_list_screen.dart';
 
 import '../../../../dependency_injection.dart';
@@ -19,19 +18,25 @@ class SujraSharifScreen extends StatefulWidget {
 }
 
 class _SujraSharifScreenState extends State<SujraSharifScreen> {
-  late SujraSharifCubit sujraSharifCubit;
+  // late SujraSharifCubit sujraSharifCubit;
 
-  @override
-  void initState() {
-    super.initState();
-    sujraSharifCubit = sl<SujraSharifCubit>();
-  }
+  // @override
+  // void initState() {
+  //   super.initState();
+  //   sujraSharifCubit = sl<SujraSharifCubit>();
+  // }
+
+  // @override
+  // void dispose() {
+  //   super.dispose();
+  //   sujraSharifCubit.close();
+  // }
 
   @override
   Widget build(BuildContext context) {
     double _w = MediaQuery.of(context).size.width;
     return BlocProvider(
-      create: (context) => sujraSharifCubit,
+      create: (context) => sl<SujraSharifCubit>(),
       child: Scaffold(
         appBar: AppBar(
           title: const Text("Sujra Sharif"),
@@ -59,6 +64,8 @@ class _SujraSharifScreenState extends State<SujraSharifScreen> {
                           duration: const Duration(milliseconds: 2500),
                           child: GestureDetector(
                             child: OpenContainer(
+                              closedColor:
+                                  Theme.of(context).scaffoldBackgroundColor,
                               closedShape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(20)),
                               transitionDuration:

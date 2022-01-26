@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/theme/size_constants.dart';
-import '../../../../core/theme/theme_color.dart';
-import '../../domain/entity/sujra_detail_entity.dart';
 import '../../domain/entity/sujra_entity.dart';
 
 class SujraSharifCard extends StatelessWidget {
@@ -18,21 +17,36 @@ class SujraSharifCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+      child: Row(
         children: [
-          Text(
-            sujraSharif.title,
-            maxLines: 1,
-            overflow: TextOverflow.ellipsis,
-            style: Theme.of(context).textTheme.headline6,
+          Padding(
+            padding: const EdgeInsets.all(5.0),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(50),
+              child: Stack(
+                children: [
+                  SizedBox(
+                    width: 105.w,
+                    child: const ColoredBox(
+                      color: Colors.white,
+                    ),
+                  ),
+                  Image.asset(
+                    sujraSharif.image,
+                    fit: BoxFit.cover,
+                  ),
+                ],
+              ),
+            ),
           ),
-          Text(
-            'sujraSharif.data',
-            maxLines: 3,
-            overflow: TextOverflow.ellipsis,
-            style: Theme.of(context).textTheme.caption,
-          )
+          Expanded(
+            child: Text(
+              sujraSharif.title,
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+              style: Theme.of(context).textTheme.headline5,
+            ),
+          ),
         ],
       ),
       padding: const EdgeInsets.all(Sizes.dimen_10),

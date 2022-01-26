@@ -1,10 +1,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.sdfsdf">
+    package="com.example.jamatrazaemustafa">
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
    <application
-        android:label="JamatRazaEMustafa debug"
+        android:label="Jamat Raza-E-Mustafa debug"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

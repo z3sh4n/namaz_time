@@ -1,13 +1,15 @@
 import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
+import 'package:sdfsdf/features/sujra_sharif/presentation/cubit/cubit/sujrafb_cubit.dart';
 import '../../../../core/theme/size_constants.dart';
+import '../../../../dependency_injection.dart';
 import '../../domain/entity/sujra_entity.dart';
-import '../widgets/sujra_sharif_card.dart';
 import 'sujra_sharif_detail_screen.dart';
 import '../widgets/sujra_sharif_detail_card.dart';
 
-class SujraListScreen extends StatelessWidget {
+class SujraListScreen extends StatefulWidget {
   final SujraEntity sujraEntity;
   const SujraListScreen({
     Key? key,
@@ -15,18 +17,37 @@ class SujraListScreen extends StatelessWidget {
   }) : super(key: key);
 
   @override
+  State<SujraListScreen> createState() => _SujraListScreenState();
+}
+
+class _SujraListScreenState extends State<SujraListScreen> {
+  // late SujraFBCubit sujraFBCubit;
+
+  // @override
+  // void initState() {
+  //   super.initState();
+  //   sujraFBCubit = sl<SujraFBCubit>();
+  // }
+
+  // @override
+  // void dispose() {
+  //   sujraFBCubit.close();
+  //   super.dispose();
+  // }
+
+  @override
   Widget build(BuildContext context) {
     double _w = MediaQuery.of(context).size.width;
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(sujraEntity.title),
+        title: Text(widget.sujraEntity.title),
       ),
       body: ListView.builder(
         padding: EdgeInsets.all(_w / 30),
         physics: const BouncingScrollPhysics(
             parent: AlwaysScrollableScrollPhysics()),
-        itemCount: sujraEntity.data.length,
+        itemCount: widget.sujraEntity.data.length,
         itemBuilder: (BuildContext context, int index) {
           return AnimationConfiguration.staggeredList(
             position: index,
@@ -39,6 +60,7 @@ class SujraListScreen extends StatelessWidget {
                 duration: const Duration(milliseconds: 2500),
                 child: GestureDetector(
                   child: OpenContainer(
+                    closedColor: Theme.of(context).scaffoldBackgroundColor,
                     closedShape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20)),
                     transitionDuration: const Duration(milliseconds: 500),
@@ -46,12 +68,16 @@ class SujraListScreen extends StatelessWidget {
                     closedBuilder: (ctx, _) {
                       return SujraSharifDetailCard(
                         w: _w,
-                        sujraSharif: sujraEntity.data[index],
+                        sujraSharif: widget.sujraEntity.data[index],
                       );
                     },
                     openBuilder: (ctx, _) {
-                      return SujraDetailScreen(
-                          sujraSharif: sujraEntity.data[index]);
+                      return BlocProvider<SujraFBCubit>(
+                        create: (context) => sl<SujraFBCubit>(),
+                        child: SujraDetailScreen(
+                            image: widget.sujraEntity.image,
+                            sujraSharif: widget.sujraEntity.data[index]),
+                      );
                     },
                   ),
                 ),

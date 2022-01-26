@@ -17,6 +17,5 @@ class LocationdetailCubit extends Cubit<LocationdetailState> {
         '${place.street},${place.locality},${place.administrativeArea},${place.country}',
       ),
     );
-    print('adfkladsklf');
   }
 }

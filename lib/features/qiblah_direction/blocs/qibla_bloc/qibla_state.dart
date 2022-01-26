@@ -25,7 +25,7 @@ class QiblaLoaded extends QiblaState {
 }
 
 class QiblaFailed extends QiblaState {
-  QiblaFailed(param0);
+  const QiblaFailed(param0);
 
   @override
   List<Object?> get props => [];

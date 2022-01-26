@@ -2,16 +2,16 @@ import 'sujra_detail_model.dart';
 import '../../domain/entity/sujra_entity.dart';
 
 class SujraModel extends SujraEntity {
-  final String title1;
-  final String image1;
-  final List<SujraDetailModel> sujraSharif;
+  final String mTitleSubfold;
+  final String mImagaSubfold;
+  final List<SujraDetailModel> sujraSharifDetailList;
 
   const SujraModel({
-    required this.image1,
-    required this.title1,
-    required this.sujraSharif,
-  }) : super(title: title1, data: sujraSharif, image: image1);
+    required this.mImagaSubfold,
+    required this.mTitleSubfold,
+    required this.sujraSharifDetailList,
+  }) : super(title: mTitleSubfold, data: sujraSharifDetailList, image: mImagaSubfold);
 
   @override
-  List<Object?> get props => [title, sujraSharif, image];
+  List<Object?> get props => [title, sujraSharifDetailList, image];
 }

@@ -8,15 +8,15 @@ part 'theme_event.dart';
 part 'theme_state.dart';
 
 class ThemeBloc extends HydratedBloc<ThemeEvent, ThemeState> {
-  ThemeBloc() : super(ThemeState(kAppThemeData[AppTheme.Dark]!)) {
+  ThemeBloc() : super(ThemeState(kAppThemeData[AppTheme.dark]!)) {
     on<ToggleTheme>((event, emit) => chageTheme(event, emit));
   }
 
   void chageTheme(ToggleTheme event, Emitter<ThemeState> emit) async {
-    if (state.currentTheme == kAppThemeData[AppTheme.Dark]!) {
-      emit(ThemeState(kAppThemeData[AppTheme.Light]!));
-    } else if (state.currentTheme == kAppThemeData[AppTheme.Light]!) {
-      emit(ThemeState(kAppThemeData[AppTheme.Dark]!));
+    if (state.currentTheme == kAppThemeData[AppTheme.dark]!) {
+      emit(ThemeState(kAppThemeData[AppTheme.light]!));
+    } else if (state.currentTheme == kAppThemeData[AppTheme.light]!) {
+      emit(ThemeState(kAppThemeData[AppTheme.dark]!));
     }
   }
 
@@ -24,9 +24,9 @@ class ThemeBloc extends HydratedBloc<ThemeEvent, ThemeState> {
   ThemeState? fromJson(Map<String, dynamic> json) {
     try {
       if (json['light'] as bool) {
-        return ThemeState(kAppThemeData[AppTheme.Light]!);
+        return ThemeState(kAppThemeData[AppTheme.light]!);
       }
-      return ThemeState(kAppThemeData[AppTheme.Dark]!);
+      return ThemeState(kAppThemeData[AppTheme.dark]!);
     } catch (e) {
       return null;
     }
@@ -36,7 +36,7 @@ class ThemeBloc extends HydratedBloc<ThemeEvent, ThemeState> {
   Map<String, bool>? toJson(ThemeState state) {
     try {
       return {
-        'light': state.currentTheme == kAppThemeData[AppTheme.Light]!,
+        'light': state.currentTheme == kAppThemeData[AppTheme.light]!,
       };
     } catch (e) {
       return null;

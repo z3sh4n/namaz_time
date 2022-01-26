@@ -34,6 +34,7 @@ class LocationSuccess extends LocationState {
 
   @override
   List<Object> get props => [latitude, longitude];
+  
 }
 
 class LocationFailed extends LocationState {

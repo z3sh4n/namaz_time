@@ -1,13 +1,12 @@
-import 'package:equatable/equatable.dart';
 import '../../domain/entity/sujra_detail_entity.dart';
 
 class SujraDetailModel extends SujraDetailEntity {
-  final String title;
+  final String mDetailTitle;
   final String data;
 
-  const SujraDetailModel({required this.title, required this.data})
-      : super(title: title, data: data);
+  const SujraDetailModel({required this.mDetailTitle, required this.data})
+      : super(eDetailTitle: mDetailTitle, data: data);
 
   @override
-  List<Object?> get props => [title, data];
+  List<Object?> get props => [eDetailTitle, data];
 }

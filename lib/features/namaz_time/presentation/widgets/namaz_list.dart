@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:sdfsdf/core/theme/size_constants.dart';
+import 'package:sdfsdf/core/theme/theme_color.dart';
 import '../../../location/presentation/cubit/location_cubit.dart';
 import '../cubit/namaz_time_cubit.dart';
 
@@ -39,28 +41,51 @@ class _PrayerTimeListState extends State<PrayerTimeList> {
           return ListView.builder(
             physics: const BouncingScrollPhysics(),
             itemCount: state.namazTimeList.length,
-            itemBuilder: (context, index) => Card(
-              color: Theme.of(context).primaryColor,
-              shape: RoundedRectangleBorder(
-                  side: const BorderSide(color: Colors.black38),
-                  borderRadius: BorderRadius.circular(15)),
+            itemBuilder: (context, index) => Container(
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(15),
+                  boxShadow: const [
+                    BoxShadow(
+                        color: Colors.black26,
+                        blurRadius: Sizes.dimen_4,
+                        offset: Offset(
+                          Sizes.dimen_1,
+                          Sizes.dimen_2,
+                        ))
+                  ],
+                  color: Theme.of(context).bottomAppBarColor
+                  // gradient: const LinearGradient(
+                  //   colors: [
+                  //     kLightPrimary,
+                  //     kLightPrimary,
+                  //   ],
+                  //   begin: Alignment.topLeft,
+                  //   end: Alignment.bottomRight,
+                  // ),
+                  ),
               margin: const EdgeInsets.symmetric(vertical: 9, horizontal: 10),
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
-                      state.namazTimeList[index].namazName,
-                      maxLines: 1,
-                      softWrap: true,
-                      style: Theme.of(context).textTheme.headline4,
-                    ),
+                    Text(state.namazTimeList[index].namazName,
+                        maxLines: 1,
+                        softWrap: true,
+                        style: Theme.of(context).textTheme.headline4!.copyWith(
+                              color: kLightPrimary,
+                              fontWeight: FontWeight.bold,
+                            )
+                        // .copyWith(color: Colors.black),
+                        ),
                     Text(
                       state.namazTimeList[index].namazTime,
                       maxLines: 1,
                       softWrap: true,
-                      style: Theme.of(context).textTheme.headline4,
+                      style: Theme.of(context).textTheme.headline4!.copyWith(
+                            color: kLightPrimary,
+                            fontWeight: FontWeight.bold,
+                          ),
                     ),
                   ],
                 ),

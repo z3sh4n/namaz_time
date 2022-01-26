@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sdfsdf/core/drawer/drawer.dart';
 import '../theme/size_constants.dart';
 import '../theme/theme_color.dart';
 import '../../features/namaz_time/presentation/screens/home_screen.dart';
@@ -27,12 +28,13 @@ class BottomNav3State extends State<BottomNav3> {
   Widget build(BuildContext context) {
     double _width = MediaQuery.of(context).size.width;
     return Scaffold(
+      drawer: const Drawerx(),
       body: pagelist[currentIndex],
       bottomNavigationBar: Container(
         margin: const EdgeInsets.all(20),
         height: _width * .155,
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: Theme.of(context).bottomAppBarColor,
           boxShadow: [
             BoxShadow(
               color: Colors.black.withOpacity(.11),
@@ -69,9 +71,9 @@ class BottomNav3State extends State<BottomNav3> {
                   ),
                   width: _width * .128,
                   height: index == currentIndex ? _width * .014 : 0,
-                  decoration: const BoxDecoration(
-                    color: kLightPrimary,
-                    borderRadius: BorderRadius.vertical(
+                  decoration: BoxDecoration(
+                    color: Theme.of(context).primaryColor,
+                    borderRadius: const BorderRadius.vertical(
                       bottom: Radius.circular(10),
                     ),
                   ),
@@ -79,8 +81,9 @@ class BottomNav3State extends State<BottomNav3> {
                 Icon(
                   listOfIcons[index],
                   size: _width * .076,
-                  color:
-                      index == currentIndex ? kLightPrimary : Colors.black38,
+                  color: index == currentIndex
+                      ? Theme.of(context).primaryColor
+                      : Theme.of(context).backgroundColor,
                 ),
                 // SizedBox(height: _width * .03),
                 AnimatedOpacity(
@@ -89,8 +92,8 @@ class BottomNav3State extends State<BottomNav3> {
                   curve: Curves.fastLinearToSlowEaseIn,
                   child: Text(
                     index == currentIndex ? listOfTitles[index] : '',
-                    style: const TextStyle(
-                      color: kLightPrimary,
+                    style: TextStyle(
+                      color: Theme.of(context).primaryColor,
                       fontWeight: FontWeight.w600,
                       fontSize: Sizes.dimen_12,
                     ),

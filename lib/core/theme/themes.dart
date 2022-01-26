@@ -4,12 +4,12 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'theme_color.dart';
 
-enum AppTheme { Dark, Light }
+enum AppTheme { dark, light }
 
 final Map<AppTheme, ThemeData> kAppThemeData = {
-  AppTheme.Dark: ThemeData.dark().copyWith(
+  AppTheme.dark: ThemeData.dark().copyWith(
     primaryColor: kDarkPrimary,
-    scaffoldBackgroundColor: kDarkBg,
+    scaffoldBackgroundColor: kDarkPlaceholderText,
     backgroundColor: kDarkPlaceholder,
     errorColor: kDarkError,
     textTheme: GoogleFonts.poppinsTextTheme(
@@ -84,7 +84,7 @@ final Map<AppTheme, ThemeData> kAppThemeData = {
       ),
     ),
     appBarTheme: AppBarTheme(
-      backgroundColor: kDarkBg,
+      backgroundColor: kDarkPlaceholderText,
       elevation: 0,
       systemOverlayStyle: SystemUiOverlayStyle.light,
       iconTheme: const IconThemeData(
@@ -105,7 +105,7 @@ final Map<AppTheme, ThemeData> kAppThemeData = {
       secondary: kDarkAccent,
     ),
   ),
-  AppTheme.Light: ThemeData.light().copyWith(
+  AppTheme.light: ThemeData.light().copyWith(
     primaryColor: kLightPrimary,
     scaffoldBackgroundColor: kLightBg,
     backgroundColor: kLightPlaceholder,
@@ -183,12 +183,14 @@ final Map<AppTheme, ThemeData> kAppThemeData = {
       ),
     ),
     appBarTheme: AppBarTheme(
+      elevation: 0,
       systemOverlayStyle: SystemUiOverlayStyle.dark,
-      backgroundColor: kLightPrimary,
+      backgroundColor: kLightBg,
+      iconTheme: const IconThemeData(color: kLightTextColor),
       titleTextStyle: TextStyle(
         fontSize: 16.sp,
         fontWeight: FontWeight.bold,
-        color: kDarkTextColor,
+        color: kLightTextColor,
       ),
     ),
     // progressIndicatorTheme: ProgressIndicatorThemeData(

@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:bloc/bloc.dart';
 import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
@@ -33,7 +35,6 @@ class LocationCubit extends Cubit<LocationState> {
       emit(eitherResponse.fold((l) {
         return LocationFailed(state.latitude, state.longitude, l);
       }, (r) {
-        // print(r);
         locationdetailCubit.getLocaitonDetail(r.latitude, r.longitude);
         return LocationSuccess(r.latitude, r.longitude);
       }));
