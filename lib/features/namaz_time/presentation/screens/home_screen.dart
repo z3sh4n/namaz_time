@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:sdfsdf/core/drawer/drawer.dart';
 import 'package:sdfsdf/core/theme/theme_color.dart';
 import 'package:sdfsdf/core/theme/themes.dart';
+import 'package:sdfsdf/core/util/loading_indicator.dart';
 import '../../../../core/theme/theme_bloc/theme_bloc.dart';
 import '../../../location/presentation/cubit/location_cubit.dart';
-import '../widgets/change_theme_switch.dart';
 import '../widgets/top_card.dart';
 import '../../../notification_remain_time/controller/notification_controller.dart';
 
@@ -90,7 +89,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ],
               );
             }
-            return const Center(child: CircularProgressIndicator());
+            return const LoadingIndicator();
           },
         ),
       ),

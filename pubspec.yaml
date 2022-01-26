@@ -37,7 +37,7 @@ dependencies:
   circular_countdown_timer: ^0.2.0
   equatable: ^2.0.3
   dartz: ^0.10.1
-  geolocator: ^8.0.1
+  geolocator: ^7.0.1
   hydrated_bloc: ^8.0.0
   flutter_bloc: ^8.0.1
   adhan: ^2.0.0-nullsafety.2
@@ -62,6 +62,7 @@ dependencies:
   firebase_storage: ^10.2.5
   firebase_core: ^1.11.0
   flutter_cached_pdfview: ^0.4.1
+  flutter_qiblah: ^2.0.2
   
 
 dev_dependencies:
@@ -122,3 +123,7 @@ flutter_icons:
   android: "ic_launcher"
   ios: true
   image_path: "assets/app_icon/icon.png"
+
+dependency_overrides:
+  flutter_compass:
+    git: https://github.com/hemanthrajv/flutter_compass.git

@@ -16,8 +16,6 @@ import 'features/namaz_time/data/repositories/namaz_time_repository_impl.dart';
 import 'features/namaz_time/domain/repositories/namaz_time_repository.dart';
 import 'features/namaz_time/domain/usecases/get_namaz_time_list_usecase.dart';
 import 'features/namaz_time/presentation/cubit/namaz_time_cubit.dart';
-import 'features/qiblah_direction/blocs/angle_bloc/angle_bloc.dart';
-import 'features/qiblah_direction/blocs/qibla_bloc/qibla_bloc.dart';
 import 'features/sujra_sharif/data/datasource/sujra_datasource.dart';
 import 'features/sujra_sharif/data/repository_impl/sujra_repository_impl.dart';
 import 'features/sujra_sharif/domain/repository/sujra_repository.dart';
@@ -39,9 +37,7 @@ Future<void> init() async {
 
   sl.registerSingleton<LocationdetailCubit>(LocationdetailCubit());
 
-  sl.registerFactory<QiblaBloc>(() => QiblaBloc());
-
-  sl.registerFactory<AngleBloc>(() => AngleBloc(sl()));
+ 
 
   // usecase
   sl.registerFactory<GetLocation>(() => GetLocation(locationRepository: sl()));

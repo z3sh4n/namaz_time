@@ -11,7 +11,6 @@ import 'core/theme/theme_bloc/theme_bloc.dart';
 import 'dependency_injection.dart' as sl;
 import 'features/location/presentation/cubit/location_cubit.dart';
 import 'features/notification_remain_time/services/notification_service.dart';
-import 'features/qiblah_direction/blocs/qibla_bloc/qibla_bloc.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -67,9 +66,7 @@ class _MyAppState extends State<MyApp> {
         BlocProvider(
           create: (context) => sl.sl<LocationCubit>(),
         ),
-        BlocProvider(
-          create: (context) => sl.sl<QiblaBloc>(),
-        ),
+      
         BlocProvider(
           create: (context) => ThemeBloc(),
         )

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sdfsdf/core/theme/size_constants.dart';
 import 'package:sdfsdf/core/theme/theme_color.dart';
+import 'package:sdfsdf/core/util/loading_indicator.dart';
 import '../../../location/presentation/cubit/location_cubit.dart';
 import '../cubit/namaz_time_cubit.dart';
 
@@ -93,7 +94,7 @@ class _PrayerTimeListState extends State<PrayerTimeList> {
             ),
           );
         }
-        return const Center(child: CircularProgressIndicator());
+        return const LoadingIndicator();
       }),
     );
   }
