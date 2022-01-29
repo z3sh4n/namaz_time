@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:sdfsdf/core/drawer/drawer.dart';
+import 'package:sdfsdf/features/dua/presentation/screens/dua_screen.dart';
 import 'package:sdfsdf/features/qiblah_direction/screens/qibla_direction_screen.dart';
 import '../theme/size_constants.dart';
 import '../../features/namaz_time/presentation/screens/home_screen.dart';
-import '../../features/quran_sharif/presentation/screen/quran_sharif_screen.dart';
 import '../../features/sujra_sharif/presentation/screen/sujra_sharif_screen.dart';
 
 class BottomNav3 extends StatefulWidget {
@@ -19,7 +19,7 @@ class BottomNav3State extends State<BottomNav3> {
   List<Widget> pagelist = <Widget>[
     const HomeScreen(),
     const QiblaDirectionScreen(),
-    const QuranSharifScreen(),
+    const DuaScreen(),
     const SujraSharifScreen(),
   ];
 
@@ -116,7 +116,7 @@ class BottomNav3State extends State<BottomNav3> {
   List<String> listOfTitles = [
     'Home',
     'Qibla Screen',
-    'Quran Sharif',
+    'Dua',
     'Sujra Sharif',
   ];
 }

@@ -10,15 +10,20 @@ part 'sujrafb_state.dart';
 class SujraFBCubit extends Cubit<SujraFBState> {
   final GetSujraFB sujraFB;
 
-  SujraFBCubit(this.sujraFB) : super(SujraFBInitial());
+  SujraFBCubit(this.sujraFB) : super(SujraFBLoading());
 
   Future<void> getSujraFB(String name) async {
-    final Either<AppError, String> either =
+    final Either<AppError, void> either =
         await sujraFB(SujraFBParams(name: name));
 
     emit(either.fold(
       (l) => SujraFBError(),
-      (r) => SujraFBLoaded(r),
+      (r) {
+        r;
+        return const SujraFBLoaded(
+          '',
+        );
+      },
     ));
   }
 }

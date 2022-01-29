@@ -97,7 +97,10 @@ class _QiblahCompassState extends State<QiblahCompass> {
 
 class QiblahCompassWidget extends StatelessWidget {
   QiblahCompassWidget({Key? key}) : super(key: key);
-  final _compassSvg = SvgPicture.asset('assets/images/svg/compass.svg');
+  final _compassSvg = SvgPicture.asset(
+    'assets/images/svg/compass.svg',
+    // color: Colors.white,
+  );
   final _needleSvg = SvgPicture.asset(
     'assets/images/svg/needle.svg',
     fit: BoxFit.contain,

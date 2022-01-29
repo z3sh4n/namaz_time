@@ -9,7 +9,7 @@ import 'package:path_provider/path_provider.dart';
 import 'package:sdfsdf/core/util/routes.dart';
 import 'core/theme/theme_bloc/theme_bloc.dart';
 import 'dependency_injection.dart' as sl;
-import 'features/location/presentation/cubit/location_cubit.dart';
+import 'features/location/presentation/location_cubit.dart';
 import 'features/notification_remain_time/services/notification_service.dart';
 
 void main() async {
@@ -61,29 +61,30 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    return MultiBlocProvider(
-      providers: [
-        BlocProvider(
-          create: (context) => sl.sl<LocationCubit>(),
+    return ScreenUtilInit(
+      designSize: const Size(360, 690),
+      minTextAdapt: true,
+      builder: () => MultiBlocProvider(
+        providers: [
+          BlocProvider(
+            create: (context) => sl.sl<LocationCubit>(),
+          ),
+          BlocProvider(
+            create: (context) => ThemeBloc(),
+          ),
+        ],
+        child: BlocBuilder<ThemeBloc, ThemeState>(
+          builder: (context, state) {
+            return MaterialApp(
+              title: 'Jamat Raza-e-Mustafa',
+              theme: state.currentTheme,
+              debugShowCheckedModeBanner: false,
+              initialRoute: RouteGenerator.bottomTab,
+              onGenerateRoute: RouteGenerator.generateRoute,
+            );
+          },
         ),
-      
-        BlocProvider(
-          create: (context) => ThemeBloc(),
-        )
-      ],
-      child: ScreenUtilInit(
-          designSize: const Size(360, 690),
-          minTextAdapt: true,
-          builder: () =>
-              BlocBuilder<ThemeBloc, ThemeState>(builder: (context, state) {
-                return MaterialApp(
-                  title: 'Jamat Raza-e-Mustafa',
-                  theme: state.currentTheme,
-                  debugShowCheckedModeBanner: false,
-                  initialRoute: RouteGenerator.bottomTab,
-                  onGenerateRoute: RouteGenerator.generateRoute,
-                );
-              })),
+      ),
     );
   }
 }

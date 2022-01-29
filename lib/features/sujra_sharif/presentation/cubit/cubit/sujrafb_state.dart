@@ -7,12 +7,13 @@ abstract class SujraFBState extends Equatable {
   List<Object> get props => [];
 }
 
-class SujraFBInitial extends SujraFBState {}
+class SujraFBLoading extends SujraFBState {}
 
 class SujraFBLoaded extends SujraFBState {
   final String path;
+  // final DownloadTask progress;
 
-  const SujraFBLoaded(this.path);
+  const SujraFBLoaded(this.path, );
 
   @override
   List<Object> get props => [path];

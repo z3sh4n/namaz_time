@@ -34,7 +34,6 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
-  circular_countdown_timer: ^0.2.0
   equatable: ^2.0.3
   dartz: ^0.10.1
   geolocator: ^7.0.1
@@ -52,7 +51,6 @@ dependencies:
   hijri: ^3.0.0
   flutter_svg: ^1.0.1
   motion_sensors: ^0.1.0
-  # auto_size_text: ^3.0.0
   flutter_staggered_animations: ^1.0.0
   path_provider: ^2.0.8
   animations: ^2.0.2
@@ -61,10 +59,11 @@ dependencies:
   in_app_review: ^2.0.4
   firebase_storage: ^10.2.5
   firebase_core: ^1.11.0
-  flutter_cached_pdfview: ^0.4.1
   flutter_qiblah: ^2.0.2
-  
+  native_pdf_view: ^5.0.0
+  flutter_downloader: ^1.7.2
 
+  # circular_countdown_timer: ^0.2.0
 dev_dependencies:
   flutter_test:
     sdk: flutter

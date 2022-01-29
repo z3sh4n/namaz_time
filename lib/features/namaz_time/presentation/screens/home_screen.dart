@@ -4,12 +4,12 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:sdfsdf/core/theme/theme_color.dart';
 import 'package:sdfsdf/core/theme/themes.dart';
 import 'package:sdfsdf/core/util/loading_indicator.dart';
+import 'package:sdfsdf/features/location/location_cubit/location_cubit.dart';
 import '../../../../core/theme/theme_bloc/theme_bloc.dart';
-import '../../../location/presentation/cubit/location_cubit.dart';
-import '../widgets/top_card.dart';
+import '../widgets/top_card_widget.dart';
 import '../../../notification_remain_time/controller/notification_controller.dart';
 
-import '../widgets/namaz_list.dart';
+import '../widgets/namaz_list_widget.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);

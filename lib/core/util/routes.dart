@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sdfsdf/core/util/navigation_bar.dart';
+import 'package:sdfsdf/core/navigation_bar/navigation_bar.dart';
 import 'package:sdfsdf/features/donate_us/presentation/screens/donate_us_screen.dart';
 import 'package:sdfsdf/features/dua/presentation/screens/dua_screen.dart';
 

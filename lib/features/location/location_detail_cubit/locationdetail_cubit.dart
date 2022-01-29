@@ -5,7 +5,7 @@ import 'package:geocoding/geocoding.dart';
 part 'locationdetail_state.dart';
 
 class LocationdetailCubit extends Cubit<LocationdetailState> {
-  LocationdetailCubit() : super(LocationdetailInitial());
+  LocationdetailCubit() : super(LocationdetailLoading());
 
   void getLocaitonDetail(double lat, double long) async {
     List<Placemark> placemarks = await placemarkFromCoordinates(lat, long);

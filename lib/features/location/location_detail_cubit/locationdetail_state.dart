@@ -7,7 +7,9 @@ abstract class LocationdetailState extends Equatable {
   List<Object> get props => [];
 }
 
-class LocationdetailInitial extends LocationdetailState {}
+class LocationdetailLoading extends LocationdetailState {}
+
+class LocationdetailError extends LocationdetailState {}
 
 class LocationdetailLoaded extends LocationdetailState {
   final String address;

@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sdfsdf/core/theme/size_constants.dart';
 import 'package:sdfsdf/core/theme/theme_color.dart';
 import 'package:sdfsdf/core/util/loading_indicator.dart';
-import '../../../location/presentation/cubit/location_cubit.dart';
+import 'package:sdfsdf/features/location/location_cubit/location_cubit.dart';
 import '../cubit/namaz_time_cubit.dart';
 
 import '../../../../dependency_injection.dart';
