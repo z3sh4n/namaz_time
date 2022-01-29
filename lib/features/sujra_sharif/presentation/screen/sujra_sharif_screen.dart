@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
+
 import '../../../../core/theme/size_constants.dart';
+import '../../../../dependency_injection.dart';
 import '../cubit/sujrasharif_cubit.dart';
 import '../widgets/sujra_sharif_card.dart';
 import 'sujra_sharif_list_screen.dart';
-
-import '../../../../dependency_injection.dart';
 
 class SujraSharifScreen extends StatefulWidget {
   const SujraSharifScreen({Key? key}) : super(key: key);
@@ -18,20 +18,6 @@ class SujraSharifScreen extends StatefulWidget {
 }
 
 class _SujraSharifScreenState extends State<SujraSharifScreen> {
-  // late SujraSharifCubit sujraSharifCubit;
-
-  // @override
-  // void initState() {
-  //   super.initState();
-  //   sujraSharifCubit = sl<SujraSharifCubit>();
-  // }
-
-  // @override
-  // void dispose() {
-  //   super.dispose();
-  //   sujraSharifCubit.close();
-  // }
-
   @override
   Widget build(BuildContext context) {
     double _w = MediaQuery.of(context).size.width;
@@ -74,12 +60,16 @@ class _SujraSharifScreenState extends State<SujraSharifScreen> {
                               closedBuilder: (ctx, _) {
                                 return SujraSharifCard(
                                   w: _w,
-                                  sujraSharif: state.listSujraEntity[index],
+                                  sujraSharifTitle:
+                                      state.listSujraEntity[index].title,
+                                  sujraSharifImage:
+                                      state.listSujraEntity[index].image,
                                 );
                               },
                               openBuilder: (ctx, _) {
                                 return SujraListScreen(
-                                    sujraEntity: state.listSujraEntity[index]);
+                                  sujraEntity: state.listSujraEntity[index],
+                                );
                               },
                             ),
                           ),

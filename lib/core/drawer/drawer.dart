@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:in_app_review/in_app_review.dart';
-import 'package:sdfsdf/core/util/routes.dart';
-import 'package:sdfsdf/features/share/share.dart';
+import 'package:namaz_time/core/util/routes.dart';
+import 'package:namaz_time/features/share/share.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import 'widgets/drawer_list_tile_widget.dart';

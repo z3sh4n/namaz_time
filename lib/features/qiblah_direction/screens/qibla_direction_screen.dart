@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_qiblah/flutter_qiblah.dart';
-import 'package:sdfsdf/core/util/loading_indicator.dart';
-import 'package:sdfsdf/features/qiblah_direction/widgets/qiblah_compass.dart';
-import 'package:sdfsdf/features/qiblah_direction/widgets/unsupported_device_widget.dart';
+import 'package:namaz_time/core/util/loading_indicator.dart';
+import 'package:namaz_time/features/qiblah_direction/widgets/qiblah_compass.dart';
+import 'package:namaz_time/features/qiblah_direction/widgets/unsupported_device_widget.dart';
 
 class QiblaDirectionScreen extends StatefulWidget {
   const QiblaDirectionScreen({Key? key}) : super(key: key);
@@ -42,5 +42,3 @@ class _QiblaDirectionScreenState extends State<QiblaDirectionScreen> {
     );
   }
 }
-
-

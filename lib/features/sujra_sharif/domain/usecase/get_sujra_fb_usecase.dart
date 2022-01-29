@@ -1,9 +1,8 @@
 import 'package:dartz/dartz.dart';
-import 'package:firebase_storage/firebase_storage.dart';
-import 'package:sdfsdf/core/errors/app_error.dart';
-import 'package:sdfsdf/core/usecase/sujra_fb_params.dart';
-import 'package:sdfsdf/core/usecase/usecase.dart';
-import 'package:sdfsdf/features/sujra_sharif/domain/repository/sujra_fb_repository.dart';
+import 'package:namaz_time/core/errors/app_error.dart';
+import 'package:namaz_time/core/usecase/sujra_fb_params.dart';
+import 'package:namaz_time/core/usecase/usecase.dart';
+import 'package:namaz_time/features/sujra_sharif/domain/repository/sujra_fb_repository.dart';
 
 class GetSujraFB extends Usecase<void, SujraFBParams> {
   final SujraFireBaseRepo sujraRepository;

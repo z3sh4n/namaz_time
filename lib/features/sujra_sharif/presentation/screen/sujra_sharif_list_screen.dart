@@ -2,12 +2,13 @@ import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
-import 'package:sdfsdf/features/sujra_sharif/presentation/cubit/cubit/sujrafb_cubit.dart';
+import 'package:namaz_time/features/sujra_sharif/presentation/widgets/sujra_sharif_card.dart';
+
 import '../../../../core/theme/size_constants.dart';
 import '../../../../dependency_injection.dart';
 import '../../domain/entity/sujra_entity.dart';
+import '../cubit/cubit/sujrafb_cubit.dart';
 import 'sujra_sharif_detail_screen.dart';
-import '../widgets/sujra_sharif_detail_card.dart';
 
 class SujraListScreen extends StatefulWidget {
   final SujraEntity sujraEntity;
@@ -66,9 +67,10 @@ class _SujraListScreenState extends State<SujraListScreen> {
                     transitionDuration: const Duration(milliseconds: 500),
                     closedElevation: Sizes.dimen_0,
                     closedBuilder: (ctx, _) {
-                      return SujraSharifDetailCard(
+                      return SujraSharifCard(
                         w: _w,
-                        sujraSharif: widget.sujraEntity.data[index],
+                        sujraSharifTitle:
+                            widget.sujraEntity.data[index].eDetailTitle,
                       );
                     },
                     openBuilder: (ctx, _) {

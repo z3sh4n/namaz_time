@@ -1,6 +1,7 @@
 import 'dart:core';
 
 import 'package:flutter/material.dart';
+
 import '../../namaz_time/domain/entities/namaz_time_entity.dart';
 import '../services/notification_service.dart';
 import '../services/receive_notification.dart';
@@ -46,7 +47,7 @@ class TimingController {
         _timingCount++;
       }
     }
-    // print('asdfsdfsdfasdf$_timingCount');
+    // print('anamaz_timesdfasdf$_timingCount');
 
     if (_timingCount == 5) {
       _timingCount = 0;

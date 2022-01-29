@@ -1,8 +1,7 @@
 import 'package:dartz/dartz.dart';
-import 'package:firebase_storage/firebase_storage.dart';
-import 'package:sdfsdf/core/errors/app_error.dart';
-import 'package:sdfsdf/features/sujra_sharif/data/datasource/sujra_firebase_datasouce.dart';
-import 'package:sdfsdf/features/sujra_sharif/domain/repository/sujra_fb_repository.dart';
+import 'package:namaz_time/core/errors/app_error.dart';
+import 'package:namaz_time/features/sujra_sharif/data/datasource/sujra_firebase_datasouce.dart';
+import 'package:namaz_time/features/sujra_sharif/domain/repository/sujra_fb_repository.dart';
 
 class SujraFireBaseRepoImpl extends SujraFireBaseRepo {
   final SujraFirebaseDatasource firebaseDatasource;

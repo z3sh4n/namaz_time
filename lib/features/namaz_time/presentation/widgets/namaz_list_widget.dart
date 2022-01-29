@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:sdfsdf/core/theme/size_constants.dart';
-import 'package:sdfsdf/core/theme/theme_color.dart';
-import 'package:sdfsdf/core/util/loading_indicator.dart';
-import 'package:sdfsdf/features/location/location_cubit/location_cubit.dart';
-import '../cubit/namaz_time_cubit.dart';
+import 'package:namaz_time/core/theme/size_constants.dart';
+import 'package:namaz_time/core/theme/theme_color.dart';
+import 'package:namaz_time/core/util/loading_indicator.dart';
+import 'package:namaz_time/features/location/location_cubit/location_cubit.dart';
 
 import '../../../../dependency_injection.dart';
+import '../cubit/namaz_time_cubit.dart';
 
 class PrayerTimeList extends StatefulWidget {
   final LocationState locationState;

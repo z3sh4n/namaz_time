@@ -1,9 +1,9 @@
 import 'package:bloc/bloc.dart';
 import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
-import 'package:sdfsdf/core/errors/app_error.dart';
-import 'package:sdfsdf/core/usecase/sujra_fb_params.dart';
-import 'package:sdfsdf/features/sujra_sharif/domain/usecase/get_sujra_fb_usecase.dart';
+import 'package:namaz_time/core/errors/app_error.dart';
+import 'package:namaz_time/core/usecase/sujra_fb_params.dart';
+import 'package:namaz_time/features/sujra_sharif/domain/usecase/get_sujra_fb_usecase.dart';
 
 part 'sujrafb_state.dart';
 

@@ -3,8 +3,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hijri/hijri_calendar.dart';
 import 'package:intl/intl.dart';
-import 'package:sdfsdf/core/theme/theme_color.dart';
-import 'package:sdfsdf/features/location/location_cubit/location_cubit.dart';
+import 'package:namaz_time/core/theme/theme_color.dart';
+import 'package:namaz_time/features/location/location_cubit/location_cubit.dart';
+
 import '../../../../core/theme/size_constants.dart';
 import '../../../../dependency_injection.dart';
 import '../../../location/location_detail_cubit/locationdetail_cubit.dart';

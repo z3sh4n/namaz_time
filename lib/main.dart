@@ -5,11 +5,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
+import 'package:namaz_time/core/util/routes.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:sdfsdf/core/util/routes.dart';
+
 import 'core/theme/theme_bloc/theme_bloc.dart';
 import 'dependency_injection.dart' as sl;
-import 'features/location/presentation/location_cubit.dart';
+import 'features/location/location_cubit/location_cubit.dart';
 import 'features/notification_remain_time/services/notification_service.dart';
 
 void main() async {
@@ -29,19 +30,6 @@ void main() async {
     () => runApp(const MyApp()),
     storage: storage,
   );
-
-  // Directory appDocDir = await getApplicationDocumentsDirectory();
-  // File downloadToFile = File('${appDocDir.path}/SHAJRA SHAREEF HINDI.pdf');
-  // print(downloadToFile);
-  // try {
-  //   await FirebaseStorage.instance
-  //       .ref('sujra_sharif/akhtar_raza_khan/SHAJRA SHAREEF HINDI.pdf')
-  //       .writeToFile(downloadToFile)
-  //       .whenComplete(() => print('sfkladskfjkajsdflkajdsfjsadjf'));
-  // } on FirebaseException catch (e) {
-  //    e.g, e.code == 'canceled'
-  //   print(e);
-  // }
 }
 
 class MyApp extends StatefulWidget {

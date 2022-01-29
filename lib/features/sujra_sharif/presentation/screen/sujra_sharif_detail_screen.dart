@@ -1,13 +1,10 @@
 // ignore_for_file: avoid_print
 
-import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:native_pdf_view/native_pdf_view.dart';
-import 'package:sdfsdf/core/errors/error_dialog.dart';
-import 'package:sdfsdf/core/errors/error_snackbar.dart';
-import 'package:sdfsdf/core/util/loading_indicator.dart';
-import 'package:sdfsdf/features/sujra_sharif/presentation/cubit/cubit/sujrafb_cubit.dart';
+import 'package:namaz_time/core/util/loading_indicator.dart';
+import 'package:namaz_time/features/sujra_sharif/presentation/cubit/cubit/sujrafb_cubit.dart';
+
 import '../../domain/entity/sujra_detail_entity.dart';
 
 class SujraDetailScreen extends StatefulWidget {
@@ -22,12 +19,6 @@ class SujraDetailScreen extends StatefulWidget {
 }
 
 class _SujraDetailScreenState extends State<SujraDetailScreen> {
-  // @override
-  // void initState() {
-  //   BlocProvider.of<SujraFBCubit>(context).getSujraFB(widget.sujraSharif.data);
-  //   super.initState();
-  // }
-
   @override
   Widget build(BuildContext context) {
     return WillPopScope(

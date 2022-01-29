@@ -1,15 +1,14 @@
 import 'package:get_it/get_it.dart';
-
-import 'package:sdfsdf/features/sujra_sharif/data/datasource/sujra_firebase_datasouce.dart';
-import 'package:sdfsdf/features/sujra_sharif/data/repository_impl/sujra_fb_repository_impl.dart';
-import 'package:sdfsdf/features/sujra_sharif/domain/repository/sujra_fb_repository.dart';
-import 'package:sdfsdf/features/sujra_sharif/domain/usecase/get_sujra_fb_usecase.dart';
+import 'package:namaz_time/features/sujra_sharif/data/datasource/sujra_firebase_datasouce.dart';
+import 'package:namaz_time/features/sujra_sharif/data/repository_impl/sujra_fb_repository_impl.dart';
+import 'package:namaz_time/features/sujra_sharif/domain/repository/sujra_fb_repository.dart';
+import 'package:namaz_time/features/sujra_sharif/domain/usecase/get_sujra_fb_usecase.dart';
 
 import 'features/location/data/datasource/location_datasource.dart';
 import 'features/location/data/repository/location_repository_impl.dart';
 import 'features/location/domain/repositories/location_repository.dart';
 import 'features/location/domain/usecase/get_location_usecase.dart';
-import 'features/location/presentation/location_cubit.dart';
+import 'features/location/location_cubit/location_cubit.dart';
 import 'features/location/location_detail_cubit/locationdetail_cubit.dart';
 import 'features/namaz_time/data/datasources/namaz_remote_datasource.dart';
 import 'features/namaz_time/data/repositories/namaz_time_repository_impl.dart';
@@ -36,8 +35,6 @@ Future<void> init() async {
   sl.registerFactory<SujraFBCubit>(() => SujraFBCubit(sl()));
 
   sl.registerSingleton<LocationdetailCubit>(LocationdetailCubit());
-
- 
 
   // usecase
   sl.registerFactory<GetLocation>(() => GetLocation(locationRepository: sl()));
