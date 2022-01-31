@@ -11,6 +11,7 @@ import 'package:path_provider/path_provider.dart';
 import 'core/theme/theme_bloc/theme_bloc.dart';
 import 'dependency_injection.dart' as sl;
 import 'features/location/location_cubit/location_cubit.dart';
+import 'features/namaz_time/presentation/cubit/namaz_time_cubit.dart';
 import 'features/notification_remain_time/services/notification_service.dart';
 
 void main() async {
@@ -60,6 +61,9 @@ class _MyAppState extends State<MyApp> {
           BlocProvider(
             create: (context) => ThemeBloc(),
           ),
+          BlocProvider<NamazTimeCubit>(
+            create: (context) => sl.sl<NamazTimeCubit>(),
+          )
         ],
         child: BlocBuilder<ThemeBloc, ThemeState>(
           builder: (context, state) {

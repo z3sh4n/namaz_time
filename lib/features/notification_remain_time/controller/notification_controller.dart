@@ -19,12 +19,12 @@ class TimingController {
 
   TimingController(this.namazTime) {
     _timingsList = [
-      {namazTime[0].namazName: namazTime[0].namazTime.split('AM')[0]},
-      {namazTime[1].namazName: namazTime[1].namazTime.split('AM')[0]},
-      {namazTime[2].namazName: namazTime[2].namazTime.split('PM')[0]},
-      {namazTime[3].namazName: namazTime[3].namazTime.split('PM')[0]},
-      {namazTime[4].namazName: namazTime[4].namazTime.split('PM')[0]},
-      {namazTime[5].namazName: namazTime[5].namazTime.split('PM')[0]},
+      {namazTime[0].namazName: namazTime[0].namazTime},
+      {namazTime[1].namazName: namazTime[1].namazTime},
+      {namazTime[2].namazName: namazTime[2].namazTime},
+      {namazTime[3].namazName: namazTime[3].namazTime},
+      {namazTime[4].namazName: namazTime[4].namazTime},
+      {namazTime[5].namazName: namazTime[5].namazTime},
     ];
     getTimingCount();
   }
@@ -37,6 +37,8 @@ class TimingController {
 
     for (final Map<String, String> timing in _timingsList) {
       final timingHour = timing.entries.first.value.split(':')[0];
+
+      // print(timingHour);
       final timingMin = timing.entries.first.value.split(':')[1];
       // print(timing.entries.first.value);
 
@@ -47,9 +49,10 @@ class TimingController {
         _timingCount++;
       }
     }
-    // print('anamaz_timesdfasdf$_timingCount');
+    print(_timingsList[_timingCount]);
+    print(_timingsList[_timingCount].entries.first.value);
 
-    if (_timingCount == 5) {
+    if (_timingCount == 6) {
       _timingCount = 0;
     }
   }
@@ -95,7 +98,7 @@ Future<List<Map<String, Object>>> loadLocalNotification(
     duration = DateTime(
       DateTime.now().year,
       DateTime.now().month,
-      DateTime.now().day + 1,
+      DateTime.now().day,
       timingHour,
       timingMin,
     ).difference(DateTime.now());

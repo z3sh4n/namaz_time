@@ -38,6 +38,6 @@ class SujraFirebaseDatasourceImpl extends SujraFirebaseDatasource {
     downloadTask = await w.getDownloadURL();
     // downloadTask.storage.setMaxDownloadRetryTime(const Duration(seconds: 20));
     debugPrint(downloadTask);
-    requestDownload(downloadTask, name);
+    // requestDownload(downloadTask, name);
   }
 }

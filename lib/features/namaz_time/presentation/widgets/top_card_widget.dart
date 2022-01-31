@@ -5,10 +5,14 @@ import 'package:hijri/hijri_calendar.dart';
 import 'package:intl/intl.dart';
 import 'package:namaz_time/core/theme/theme_color.dart';
 import 'package:namaz_time/features/location/location_cubit/location_cubit.dart';
+import 'package:namaz_time/features/namaz_time/presentation/cubit/namaz_time_cubit.dart';
+import 'package:namaz_time/features/notification_remain_time/controller/notification_controller.dart';
+import 'package:namaz_time/features/notification_remain_time/timer_bloc/timer_bloc.dart';
 
 import '../../../../core/theme/size_constants.dart';
 import '../../../../dependency_injection.dart';
 import '../../../location/location_detail_cubit/locationdetail_cubit.dart';
+import 'coundown_timer.dart';
 
 class TopCard extends StatefulWidget {
   const TopCard({Key? key}) : super(key: key);
@@ -59,9 +63,22 @@ class _TopCardState extends State<TopCard> {
           children: [
             SizedBox(width: Sizes.dimen_10.w),
             Stack(
+              alignment: Alignment.center,
               children: [
-                // const SizedBox(child: CoundownTimer()),
                 CircleAvatar(backgroundColor: Colors.white, radius: 75.r),
+                BlocBuilder<NamazTimeCubit, NamazTimeState>(
+                  builder: (context, state) {
+                    if (state is NamazTimeLoaded) {
+                      TimingController? controller;
+                      controller = TimingController(state.namazTimeList);
+                      return BlocProvider<TimerCubit>(
+                        create: (context) => TimerCubit(controller!.time),
+                        child: const CoundownTimerWidget(),
+                      );
+                    }
+                    return const SizedBox();
+                  },
+                ),
               ],
             ),
             SizedBox(width: Sizes.dimen_10.w),
@@ -148,6 +165,11 @@ class _TopCardState extends State<TopCard> {
                     ],
                   ),
                   SizedBox(height: 10.h),
+
+                  // BlocProvider<TimerCubit>(
+                  //   create: (context) => TimerCubit(controller.time),
+                  //   child: const CoundownTimerWidget(),
+                  // )
                 ],
               ),
             ),

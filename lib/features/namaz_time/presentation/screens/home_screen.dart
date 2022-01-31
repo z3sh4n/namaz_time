@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:namaz_time/core/theme/theme_color.dart';
-import 'package:namaz_time/core/theme/themes.dart';
 import 'package:namaz_time/core/util/loading_indicator.dart';
 import 'package:namaz_time/features/location/location_cubit/location_cubit.dart';
+import 'package:namaz_time/features/namaz_time/presentation/widgets/theme_toggle_button.dart';
 
-import '../../../../core/theme/theme_bloc/theme_bloc.dart';
 import '../../../notification_remain_time/controller/notification_controller.dart';
 import '../widgets/namaz_list_widget.dart';
 import '../widgets/top_card_widget.dart';
@@ -43,32 +41,10 @@ class _HomeScreenState extends State<HomeScreen> {
                   color: Theme.of(context).textTheme.headline4!.color,
                 ),
               )),
-          actions: [
+          actions: const [
             Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: BlocBuilder<ThemeBloc, ThemeState>(
-                builder: (context, state) {
-                  return AnimatedContainer(
-                    duration: kAnimationDuration,
-                    curve: kAnimationCurve,
-                    child: IconButton(
-                      onPressed: () {
-                        BlocProvider.of<ThemeBloc>(context).add(
-                          ToggleTheme(),
-                        );
-                      },
-                      icon: state.currentTheme == kAppThemeData[AppTheme.dark]!
-                          ? SvgPicture.asset(
-                              'assets/images/svg/sun1.svg',
-                              color: kDarkTextColor,
-                            )
-                          : SvgPicture.asset(
-                              'assets/images/svg/moon1.svg',
-                            ),
-                    ),
-                  );
-                },
-              ),
+              padding: EdgeInsets.all(8.0),
+              child: ThemeToggleButton(),
             ),
           ],
           title: const Text('Home'),
@@ -96,3 +72,4 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
+

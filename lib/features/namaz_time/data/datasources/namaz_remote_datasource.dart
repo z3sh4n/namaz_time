@@ -1,5 +1,6 @@
 import 'package:adhan/adhan.dart' as adhan;
 import 'package:intl/intl.dart';
+
 import '../models/namaz_time_model.dart';
 
 abstract class NamazRemoteDataSource {
@@ -17,23 +18,24 @@ class NamazRemoteDataSourceImpl extends NamazRemoteDataSource {
     return [
       NamazTimeModel(
           namazName: 'Fajr',
-          namazTime: DateFormat.jm().format(prayerTimes.fajr)),
+          namazTime: DateFormat.Hm().format(prayerTimes.fajr)),
       NamazTimeModel(
           namazName: 'Sunrise',
-          namazTime: DateFormat.jm().format(prayerTimes.sunrise)),
+          namazTime: DateFormat.Hm().format(prayerTimes.sunrise)),
       NamazTimeModel(
           namazName: 'Duhur',
-          namazTime: DateFormat.jm().format(prayerTimes.dhuhr)),
+          namazTime: DateFormat.Hm().format(prayerTimes.dhuhr)),
       NamazTimeModel(
         namazName: 'Asr',
-        namazTime: DateFormat.jm().format(prayerTimes.asr),
+        namazTime: DateFormat.Hm().format(prayerTimes.asr),
       ),
       NamazTimeModel(
           namazName: 'Maghrib',
-          namazTime: DateFormat.jm().format(prayerTimes.maghrib)),
-      NamazTimeModel(
-          namazName: 'Isha',
-          namazTime: DateFormat.jm().format(prayerTimes.isha))
+          namazTime: DateFormat.Hm().format(prayerTimes.maghrib)),
+       NamazTimeModel(
+        namazName: 'Isha',
+        namazTime: DateFormat.Hm().format(prayerTimes.isha),
+      )
     ];
   }
 }
